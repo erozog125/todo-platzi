@@ -1,4 +1,11 @@
-import './App.css'
+import './App.css';
+import { TodoCounter } from './components/TodoCounter';
+import { TodoSearch } from './components/TodoSearch';
+import { TodoList } from './components/TodoList';
+import { TodoItem } from './components/TodoItem';
+import { CreateTodoButton } from './components/CreateTodoButton';
+
+
 
 const todos = [
   {text:"Preparar desayuno", completed: false},
@@ -10,17 +17,16 @@ function App() {
   
   return (
     <>
-      {/* <TodoCounter /> */}
+      <TodoCounter />
       <h2>Has completado tantas tareas</h2>
-      {/* <TodoSearch /> */}
-      <input type="text" placeholder='filtrar tareas' />
-      {/* <TodoList>
+      <TodoSearch />
+      
+      <TodoList>
         {
           todos.map( todo => <TodoItem text={todo.text} completed={todo.completed} /> )
-        }         */}
-      {/* </TodoList> */}
-      {/* <CreateTodoButton /> */}
-      <button>+</button>
+        }         
+      </TodoList>
+      <CreateTodoButton />      
     </>
   )
 }
